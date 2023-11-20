@@ -21,6 +21,9 @@
     "oai:bielefeld": "node dist/client.js --info --max-no-del 10 --setSpec 'open_access' https://pub.uni-bielefeld.de/oai",
     "clean": "rm ./cache.db ; rm out/*"
   },
+  "bin": {
+    "oai2events": "dist/client.js"
+  },
   "keywords": [
     "oai-pmh",
     "event",

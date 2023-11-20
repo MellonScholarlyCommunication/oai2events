@@ -47,8 +47,8 @@ node dist/client.js <baseurl>
 
 The OAI-PMH parameters can be set with:
 
-- `--metadataPrefix`
-- `--from`
+- `--metadataPrefix` : the default metadata prefix is `oai_dc`
+- `--from` : the default date is yesterday
 - `--until`
 - `--setSpec`
 
