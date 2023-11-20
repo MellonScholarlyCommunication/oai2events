@@ -19,7 +19,7 @@
     "prepare": "yarn build",
     "oai:radboud": "node dist/client.js --info --from '2023-01-01' --until '2023-01-31' --max-no-del 10 --setSpec 'col_2066_119644' https://repository.ubn.ru.nl/oai/request",
     "oai:bielefeld": "node dist/client.js --info --max-no-del 10 --setSpec 'open_access' https://pub.uni-bielefeld.de/oai",
-    "clean": "rm ./cache.db ; rm in/*"
+    "clean": "rm ./cache.db ; rm out/*"
   },
   "keywords": [
     "oai-pmh",

@@ -9,17 +9,15 @@ export class DefaultRecordResolver extends AbstractRecordResolver {
     metadataPrefix : string;
     recordUrlPrefix : string;
     landingPagePrefix : string;
-    fileUrlPrefix : string;
 
     constructor(
         baseUrl: string, metadataPrefix: string = 'oai_dc',
-        recordUrlPrefix: string, landingPagePrefix: string, fileUrlPrefix: string) {
+        recordUrlPrefix: string, landingPagePrefix: string) {
         super();
         this.baseUrl = baseUrl;
         this.metadataPrefix  = metadataPrefix;
         this.recordUrlPrefix = recordUrlPrefix;
         this.landingPagePrefix = landingPagePrefix;
-        this.fileUrlPrefix   = fileUrlPrefix;
     }
 
     public async resolve(oai_id: string) : Promise<IRecordType | null> {
