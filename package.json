@@ -1,0 +1,52 @@
+{
+  "name": "oai2events",
+  "version": "0.1.0",
+  "lsd:module": true,
+  "description": "An OAI-PMH to Event Notifications bridge",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "components",
+    "dist/**/*.d.ts",
+    "dist/**/*.js",
+    "dist/**/*.js.map"
+  ],
+  "scripts": {
+    "build": "yarn build:ts && yarn build:components",
+    "build:ts": "tsc",
+    "build:watch": "tsc -w",
+    "build:components": "componentsjs-generator -s dist -r oaida1332",
+    "prepare": "yarn build",
+    "oai:radboud": "node dist/client.js --info --from '2023-01-01' --until '2023-01-31' --max-no-del 10 --setSpec 'col_2066_119644' https://repository.ubn.ru.nl/oai/request",
+    "oai:bielefeld": "node dist/client.js --info --max-no-del 10 --setSpec 'open_access' https://pub.uni-bielefeld.de/oai",
+    "clean": "rm ./cache.db ; rm in/*"
+  },
+  "keywords": [
+    "oai-pmh",
+    "event",
+    "notifications",
+    "ldn"
+  ],
+  "author": "Patrick Hochstenbach <Patrick.Hochstenbach@UGent.be>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^10.0.1",
+    "componentsjs": "^5.3.2",
+    "isomorphic-fetch": "^3.0.0",
+    "log4js": "^6.9.1",
+    "md5": "^2.3.0",
+    "n3": "^1.16.4",
+    "node-html-parser": "^6.1.11",
+    "oai-pmh": "^2.0.3",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/md5": "^2.3.2",
+    "@types/n3": "^1.10.4",
+    "@types/uuid": "^9.0.7",
+    "componentsjs-generator": "^3.1.0",
+    "typescript": "^5.0.4"
+  },
+  "repository": "https://github.com/MellonScholarlyCommunication/oai2events"
+}

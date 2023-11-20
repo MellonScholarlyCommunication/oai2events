@@ -1,0 +1,8 @@
+.DS_Store
+.nvmrc
+componentsjs-error-state.json
+in/**
+dist/**
+components/**
+node_modules/**
+cache.db

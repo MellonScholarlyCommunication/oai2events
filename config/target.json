@@ -1,0 +1,5 @@
+{
+    "id": "https://aggregator-service.org/system",
+    "inbox": "https://aggregator-service.org/requests/inbox/",
+    "type": "Service"
+}
